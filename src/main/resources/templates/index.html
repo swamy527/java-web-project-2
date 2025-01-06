@@ -2,43 +2,38 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<link rel="stylesheet" type="text/css"
-	th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
 
-<!-- include java script in the footer -->
-<script type="text/javascript"
-	th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
-<script type="text/javascript"
-	th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+	<!-- include java script in the footer -->
+	<script type="text/javascript" th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
+	<script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
 
-<title>Spring Boot MongoDB Demo</title>
+	<title>Spring Boot MongoDB Demo</title>
 </head>
+
 <body>
 	<div class="container">
 		<h1 class="text-center">Spring Boot with MongoDB Project</h1>
 		<div class="col-md-6">
-			<form name="saveUser" action="/save" method="post"
-				class="form-horizontal">
+			<form name="saveUser" action="/save" method="post" class="form-horizontal">
 				<div class="form-group">
-					<label for="firstName">First Name:</label> <input type="text"
-						id="firstName" class="form-control" placeholder="First Name"
-						name="firstName" />
+					<label for="firstName">First Name:</label> <input type="text" id="firstName" class="form-control"
+						placeholder="First Name" name="firstName" />
 				</div>
 
 				<div class="form-group">
-					<label for="lastName">Last Name:</label> <input type="text"
-						id="lastName" class="form-control" placeholder="Last Name"
-						name="lastName">
+					<label for="lastName">Last Name:</label> <input type="text" id="lastName" class="form-control"
+						placeholder="Last Name" name="lastName">
 				</div>
 
 				<div class="form-group">
-					<label for="email">Email:</label> <input type="email" id="email"
-						class="form-control" placeholder="Email" name="email">
+					<label for="email">Email:</label> <input type="email" id="email" class="form-control"
+						placeholder="Email" name="email">
 				</div>
 				<div class="form-group">
 					<button type="submit" class="btn btn-default">Submit</button>
@@ -66,15 +61,10 @@
 
 		<div class="row-md-8">
 			<div class="col-md-3">
-				<img th:src="@{/img/prasanth.jpg}" alt="logo" height="200">
+				<img th:src="@{/img/comp.jpg}" alt="logo" height="200">
 			</div>
 			<div class="col-md-8">
-				<h4 class="text-center">KK DEVOPS ONLINE TRAINING BANGLORE.</h4>
-				<h4 class="text-center">Contact @ +91 8639380177 ,
-					+91-9676831734</h4>
-				<h5 class="text-center">
-					Copyrights 2020 by <a href="http://kkdevops.com/">KK DEVOPS</a>
-				</h5>
+				<h4 class="text-center">LOGIN PROJECT VERSION 1</h4>
 			</div>
 		</div>
 
@@ -82,10 +72,10 @@
 
 	<script>
 		$.ajax({
-			url : "/api/users",
+			url: "/api/users",
 
-			success : function(response) {
-				$.each(response, function(i, item) {
+			success: function (response) {
+				$.each(response, function (i, item) {
 					var row = $("<tr />");
 					$("#usersTable").append(row);
 
@@ -99,4 +89,5 @@
 		})
 	</script>
 </body>
+
 </html>
